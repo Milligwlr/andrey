@@ -39,14 +39,22 @@ document.documentElement.classList.remove('no-js');
   // Filtros de padecimientos
   var fb=document.querySelector('.filterbar');
   if(fb){
+    var pgrid=document.querySelector('.pgrid');
     var pcards=document.querySelectorAll('.pgrid .pcard');
+    function applyFilter(f){
+      pcards.forEach(function(c){ c.classList.toggle('is-hidden', !(f==='all'||c.getAttribute('data-cat')===f)); });
+      // #2: vista compacta cuando se ve "Todas" (rejilla muy extensa)
+      if(pgrid) pgrid.classList.toggle('is-all', f==='all');
+    }
     fb.addEventListener('click',function(e){
       var b=e.target.closest('.fbtn'); if(!b) return;
       fb.querySelectorAll('.fbtn').forEach(function(x){x.classList.remove('is-active');x.setAttribute('aria-selected','false');});
       b.classList.add('is-active'); b.setAttribute('aria-selected','true');
-      var f=b.getAttribute('data-filter');
-      pcards.forEach(function(c){ c.classList.toggle('is-hidden', !(f==='all'||c.getAttribute('data-cat')===f)); });
+      applyFilter(b.getAttribute('data-filter'));
     });
+    // estado inicial (si "Todas" arranca activo, compacta de entrada)
+    var act=fb.querySelector('.fbtn.is-active');
+    applyFilter(act?act.getAttribute('data-filter'):'all');
   }
 
 

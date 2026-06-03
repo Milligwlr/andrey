@@ -1,25 +1,28 @@
 /* ============================================================
    tokens.css — IDENTIDAD DE MARCA · Dr. Eric Andrey Rodríguez Vega
    Neumología · Enfermedades Pulmonares Intersticiales
-   Dirección: editorial cálida-clínica. Sin cliché azul/blanco ni teal.
-   Base marfil · tinta profunda cálida · acento arcilla/sienna · ámbar suave.
-   (Lo único que cambia entre médicos vive aquí.)
+   Dirección v4: CIRUELA/PLUM CLÍNICO. Cálido de base roja, profundo y
+   premium — autoridad serena + calidez humana, diferenciado del azul/teal.
+   Acento dorado (dosis pequeñas) · neutros marfil · teal sobrio solo en datos.
+   Paleta validada por experto en marketing médico (contrastes WCAG AAA).
+   Nota: se conservan los NOMBRES de token (--clay-*, --amber-*) por
+   compatibilidad; sus VALORES son ahora ciruela/dorado.
    ============================================================ */
 :root{
-  /* ---- PRIMITIVAS DE COLOR (OKLCH) ---- */
-  --clay-700: oklch(0.42 0.11 42);
-  --clay-600: oklch(0.52 0.15 41);
-  --clay-500: oklch(0.555 0.15 40);   /* acento de marca principal */
-  --clay-400: oklch(0.68 0.11 45);
-  --clay-100: oklch(0.93 0.035 60);
-  --amber-300: oklch(0.80 0.12 80);  /* realce cálido dorado */
-  --ink-900: oklch(0.19 0.016 52);    /* texto / secciones oscuras */
-  --ink-800: oklch(0.27 0.02 55);
-  --ink-600: oklch(0.44 0.018 58);    /* texto secundario */
-  --ivory-50: oklch(0.985 0.008 78);  /* fondo */
-  --ivory-100: oklch(0.965 0.011 74); /* superficie */
-  --ivory-200: oklch(0.93 0.013 72);  /* bordes */
-  --slate-500: oklch(0.52 0.045 248); /* acento frío puntual (azul discreto) */
+  /* ---- PRIMITIVAS DE COLOR (OKLCH) — Ciruela/Plum ---- */
+  --clay-700: oklch(0.33 0.110 340);  /* ciruela fuerte (texto/eyebrows/links) */
+  --clay-600: oklch(0.37 0.118 340);
+  --clay-500: oklch(0.41 0.120 340);  /* #6B2D5C — acento de marca principal */
+  --clay-400: oklch(0.56 0.100 344);  /* ciruela claro (bordes hover) */
+  --clay-100: oklch(0.94 0.022 340);  /* superficie suave ciruela */
+  --amber-300: oklch(0.71 0.130 80);  /* realce DORADO #C8922E */
+  --ink-900: oklch(0.25 0.040 335);   /* texto principal — tinta ciruela */
+  --ink-800: oklch(0.32 0.045 338);   /* secciones oscuras */
+  --ink-600: oklch(0.45 0.025 340);   /* texto secundario — malva grisáceo */
+  --ivory-50: oklch(0.985 0.006 60);  /* fondo marfil cálido */
+  --ivory-100: oklch(0.968 0.008 55); /* superficie */
+  --ivory-200: oklch(0.89 0.010 55);  /* bordes */
+  --slate-500: oklch(0.52 0.075 185); /* acento frío puntual (teal sobrio, solo datos) */
 
   /* ---- SEMÁNTICOS ---- */
   --color-bg: var(--ivory-50);
@@ -33,8 +36,8 @@
   --color-accent: var(--amber-300);
   --color-cool: var(--slate-500);
   --color-ink: var(--ink-900);
-  --color-on-brand: oklch(0.99 0.01 78);
-  --color-on-ink: oklch(0.95 0.012 78);
+  --color-on-brand: oklch(0.985 0.008 60);
+  --color-on-ink: oklch(0.95 0.010 60);
 
   /* ---- TIPOGRAFÍA ---- */
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
