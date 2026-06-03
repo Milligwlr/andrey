@@ -454,7 +454,7 @@ h1,h2,h3,h4,p,a,li{overflow-wrap:break-word}
 /* ---- Acentos por categoría (codificación de color = escaneabilidad) ---- */
 :root{
   --cat-intersticiales: var(--clay-500);          /* alta especialidad → marca (azul) */
-  --cat-vias: oklch(0.55 0.095 215);              /* vías aéreas → cian/teal */
+  --cat-vias: oklch(0.48 0.105 216);              /* vías aéreas → cian/teal (oscurecido p/ AA) */
   --cat-sueno: oklch(0.46 0.095 262);             /* sueño → índigo */
   --cat-pleura: oklch(0.53 0.14 22);              /* pleura/circulación → rojo (urgencia) */
   --cat-otros: oklch(0.50 0.030 245);             /* otras → azul grisáceo */
