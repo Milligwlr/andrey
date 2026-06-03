@@ -1,0 +1,7 @@
+# Artefactos locales / herramientas (no son parte del sitio)
+.claude/
+.playwright-mcp/
+_writetest.txt
+.DS_Store
+Thumbs.db
+.git_broken_backup/

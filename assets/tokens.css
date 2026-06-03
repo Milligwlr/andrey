@@ -1,0 +1,74 @@
+/* ============================================================
+   tokens.css — IDENTIDAD DE MARCA · Dr. Eric Andrey Rodríguez Vega
+   Neumología · Enfermedades Pulmonares Intersticiales
+   Dirección: editorial cálida-clínica. Sin cliché azul/blanco ni teal.
+   Base marfil · tinta profunda cálida · acento arcilla/sienna · ámbar suave.
+   (Lo único que cambia entre médicos vive aquí.)
+   ============================================================ */
+:root{
+  /* ---- PRIMITIVAS DE COLOR (OKLCH) ---- */
+  --clay-700: oklch(0.42 0.11 42);
+  --clay-600: oklch(0.52 0.15 41);
+  --clay-500: oklch(0.555 0.15 40);   /* acento de marca principal */
+  --clay-400: oklch(0.68 0.11 45);
+  --clay-100: oklch(0.93 0.035 60);
+  --amber-300: oklch(0.80 0.12 80);  /* realce cálido dorado */
+  --ink-900: oklch(0.19 0.016 52);    /* texto / secciones oscuras */
+  --ink-800: oklch(0.27 0.02 55);
+  --ink-600: oklch(0.44 0.018 58);    /* texto secundario */
+  --ivory-50: oklch(0.985 0.008 78);  /* fondo */
+  --ivory-100: oklch(0.965 0.011 74); /* superficie */
+  --ivory-200: oklch(0.93 0.013 72);  /* bordes */
+  --slate-500: oklch(0.52 0.045 248); /* acento frío puntual (azul discreto) */
+
+  /* ---- SEMÁNTICOS ---- */
+  --color-bg: var(--ivory-50);
+  --color-surface: var(--ivory-100);
+  --color-surface-2: var(--clay-100);
+  --color-border: var(--ivory-200);
+  --color-text: var(--ink-900);
+  --color-text-soft: var(--ink-600);
+  --color-brand: var(--clay-500);
+  --color-brand-strong: var(--clay-700);
+  --color-accent: var(--amber-300);
+  --color-cool: var(--slate-500);
+  --color-ink: var(--ink-900);
+  --color-on-brand: oklch(0.99 0.01 78);
+  --color-on-ink: oklch(0.95 0.012 78);
+
+  /* ---- TIPOGRAFÍA ---- */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Hanken Grotesk", system-ui, -apple-system, Segoe UI, sans-serif;
+  --font-mono: "Spline Sans Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Escala fluida (clamp con piso en rem para WCAG 1.4.4 resize) */
+  --fs-display: clamp(2.2rem, 1.5rem + 3.6vw, 4.6rem);
+  --fs-h1: clamp(2.1rem, 1.5rem + 2.7vw, 3.4rem);
+  --fs-h2: clamp(1.55rem, 1.2rem + 1.6vw, 2.3rem);
+  --fs-h3: clamp(1.2rem, 1.05rem + 0.7vw, 1.5rem);
+  --fs-body: clamp(1.08rem, 1.02rem + 0.2vw, 1.18rem); /* >=18px móvil (adultos mayores) */
+  --fs-sm: 0.95rem;
+  --lh-tight: 1.08;
+  --lh-snug: 1.28;
+  --lh-body: 1.62;
+
+  /* ---- ESPACIO (escala 8pt) ---- */
+  --space:0.5rem; --space-2:1rem; --space-3:1.5rem; --space-4:2rem;
+  --space-5:3rem; --space-6:4rem; --space-8:6rem;
+  --section-y: clamp(3.5rem, 6vw, 7rem);
+  --container: 72rem;
+  --container-narrow: 46rem;
+
+  /* ---- FORMA / SOMBRA / MOTION ---- */
+  --radius: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --shadow-1: 0 1px 2px oklch(0.21 0.02 55 / 0.05), 0 2px 8px oklch(0.21 0.02 55 / 0.06);
+  --shadow-2: 0 8px 24px oklch(0.21 0.02 55 / 0.09), 0 2px 6px oklch(0.21 0.02 55 / 0.06);
+  --shadow-3: 0 24px 60px oklch(0.21 0.02 55 / 0.14);
+  --ease-out-expo: cubic-bezier(0.16,1,0.3,1);
+  --duration: 240ms;
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
