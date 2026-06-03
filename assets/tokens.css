@@ -9,20 +9,22 @@
    compatibilidad; sus VALORES son ahora ciruela/dorado.
    ============================================================ */
 :root{
-  /* ---- PRIMITIVAS DE COLOR (OKLCH) — Ciruela/Plum ---- */
-  --clay-700: oklch(0.33 0.110 340);  /* ciruela fuerte (texto/eyebrows/links) */
-  --clay-600: oklch(0.37 0.118 340);
-  --clay-500: oklch(0.41 0.120 340);  /* #6B2D5C — acento de marca principal */
-  --clay-400: oklch(0.56 0.100 344);  /* ciruela claro (bordes hover) */
-  --clay-100: oklch(0.94 0.022 340);  /* superficie suave ciruela */
-  --amber-300: oklch(0.71 0.130 80);  /* realce DORADO #C8922E */
-  --ink-900: oklch(0.25 0.040 335);   /* texto principal — tinta ciruela */
-  --ink-800: oklch(0.32 0.045 338);   /* secciones oscuras */
-  --ink-600: oklch(0.45 0.025 340);   /* texto secundario — malva grisáceo */
-  --ivory-50: oklch(0.985 0.006 60);  /* fondo marfil cálido */
-  --ivory-100: oklch(0.968 0.008 55); /* superficie */
-  --ivory-200: oklch(0.89 0.010 55);  /* bordes */
-  --slate-500: oklch(0.52 0.075 185); /* acento frío puntual (teal sobrio, solo datos) */
+  /* ---- PRIMITIVAS DE COLOR (OKLCH) — AZUL DE MARCA (identidad Dr. Andrey) ----
+     Navy profundo · azul acero · azul claro · neutros fríos. Tomada del
+     logotipo/paleta oficial del doctor. (Se conservan los NOMBRES de token.) */
+  --clay-700: oklch(0.34 0.072 248);  /* azul fuerte (texto/eyebrows/links) */
+  --clay-600: oklch(0.41 0.085 247);
+  --clay-500: oklch(0.46 0.092 246);  /* #235D86 — azul acero, marca principal */
+  --clay-400: oklch(0.66 0.075 242);  /* azul claro (bordes hover) */
+  --clay-100: oklch(0.93 0.018 235);  /* superficie suave azul */
+  --amber-300: oklch(0.62 0.105 240); /* acento (azul brillante / realces) */
+  --ink-900: oklch(0.25 0.035 250);   /* texto principal — navy profundo */
+  --ink-800: oklch(0.31 0.040 250);   /* secciones oscuras */
+  --ink-600: oklch(0.48 0.028 246);   /* texto secundario — azul grisáceo */
+  --ivory-50: oklch(0.975 0.006 235); /* fondo (gris-azul muy claro) */
+  --ivory-100: oklch(0.992 0.004 235);/* superficie */
+  --ivory-200: oklch(0.90 0.013 235); /* bordes */
+  --slate-500: oklch(0.52 0.085 235); /* acento frío puntual */
 
   /* ---- SEMÁNTICOS ---- */
   --color-bg: var(--ivory-50);
@@ -36,8 +38,8 @@
   --color-accent: var(--amber-300);
   --color-cool: var(--slate-500);
   --color-ink: var(--ink-900);
-  --color-on-brand: oklch(0.985 0.008 60);
-  --color-on-ink: oklch(0.95 0.010 60);
+  --color-on-brand: oklch(0.985 0.006 235);
+  --color-on-ink: oklch(0.95 0.008 235);
 
   /* ---- TIPOGRAFÍA ---- */
   --font-display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
