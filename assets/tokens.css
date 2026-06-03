@@ -40,7 +40,7 @@
   --color-on-ink: oklch(0.95 0.010 60);
 
   /* ---- TIPOGRAFÍA ---- */
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-sans: "Hanken Grotesk", system-ui, -apple-system, Segoe UI, sans-serif;
   --font-mono: "Spline Sans Mono", ui-monospace, SFMono-Regular, monospace;
 
