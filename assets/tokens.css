@@ -1,12 +1,11 @@
 /* ============================================================
    tokens.css — IDENTIDAD DE MARCA · Dr. Eric Andrey Rodríguez Vega
    Neumología · Enfermedades Pulmonares Intersticiales
-   Dirección v4: CIRUELA/PLUM CLÍNICO. Cálido de base roja, profundo y
-   premium — autoridad serena + calidez humana, diferenciado del azul/teal.
-   Acento dorado (dosis pequeñas) · neutros marfil · teal sobrio solo en datos.
-   Paleta validada por experto en marketing médico (contrastes WCAG AAA).
+   Dirección v6: AZUL DE MARCA (identidad oficial del Dr. Andrey).
+   Navy profundo · azul acero (#235D86) · azul claro · acento azul brillante ·
+   neutros fríos. Autoridad clínica + calma + confianza. Tomada del logotipo.
    Nota: se conservan los NOMBRES de token (--clay-*, --amber-*) por
-   compatibilidad; sus VALORES son ahora ciruela/dorado.
+   compatibilidad; sus VALORES son ahora AZULES (no ciruela ni dorado).
    ============================================================ */
 :root{
   /* ---- PRIMITIVAS DE COLOR (OKLCH) — AZUL DE MARCA (identidad Dr. Andrey) ----
@@ -17,7 +16,7 @@
   --clay-500: oklch(0.46 0.092 246);  /* #235D86 — azul acero, marca principal */
   --clay-400: oklch(0.66 0.075 242);  /* azul claro (bordes hover) */
   --clay-100: oklch(0.93 0.018 235);  /* superficie suave azul */
-  --amber-300: oklch(0.62 0.105 240); /* acento (azul brillante / realces) */
+  --amber-300: oklch(0.70 0.110 240); /* acento azul brillante — L≈0.70 p/ AA sobre navy (texto pequeño) */
   --ink-900: oklch(0.25 0.035 250);   /* texto principal — navy profundo */
   --ink-800: oklch(0.31 0.040 250);   /* secciones oscuras */
   --ink-600: oklch(0.48 0.028 246);   /* texto secundario — azul grisáceo */

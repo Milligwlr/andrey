@@ -69,18 +69,32 @@ document.documentElement.classList.remove('no-js');
   }catch(e){}
 
   // ---- Modales ----
+  function focusables(m){
+    return [].slice.call(m.querySelectorAll('button:not([disabled]),a[href],input,select,textarea,[tabindex]:not([tabindex="-1"])'))
+      .filter(function(el){return el.offsetWidth||el.offsetHeight||el.getClientRects().length;});
+  }
   function openModal(m){
     lastFocus=document.activeElement;
     m.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
-    var f=m.querySelector('button,a[href],[tabindex]'); if(f) f.focus();
-    document.addEventListener('keydown',esc);
+    var title=m.querySelector('.modal__panel h2');           // foco al título (no al botón cerrar)
+    if(title){ title.setAttribute('tabindex','-1'); title.focus(); }
+    else { var f=focusables(m)[0]; if(f) f.focus(); }
+    document.addEventListener('keydown',onKey);
   }
   function closeModal(m){
     m.setAttribute('aria-hidden','true'); document.body.style.overflow='';
-    document.removeEventListener('keydown',esc);
-    if(lastFocus&&lastFocus.focus) lastFocus.focus();
+    document.removeEventListener('keydown',onKey);
+    if(lastFocus&&lastFocus.focus) lastFocus.focus();          // restaura foco al disparador
   }
-  function esc(e){ if(e.key==='Escape'){document.querySelectorAll('.modal[aria-hidden="false"]').forEach(closeModal);} }
+  function onKey(e){
+    if(e.key==='Escape'){ document.querySelectorAll('.modal[aria-hidden="false"]').forEach(closeModal); return; }
+    if(e.key!=='Tab') return;
+    var m=document.querySelector('.modal[aria-hidden="false"]'); if(!m) return;
+    var f=focusables(m); if(!f.length) return;                 // focus-trap: Tab cicla dentro del modal
+    var first=f[0], last=f[f.length-1], a=document.activeElement;
+    if(e.shiftKey && (a===first||!m.contains(a))){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && a===last){ e.preventDefault(); first.focus(); }
+  }
 
   var agenda=document.getElementById('modal-agenda');
   var detail=document.getElementById('modal-detail');
@@ -101,7 +115,11 @@ document.documentElement.classList.remove('no-js');
       e.preventDefault();
       var src=document.getElementById('detail-'+c.getAttribute('data-detail'));
       var body=detail.querySelector('.modal__body');
-      if(src&&body){ body.innerHTML=src.innerHTML; openModal(detail); }
+      if(src&&body){ body.innerHTML=src.innerHTML;
+        var cat=getComputedStyle(c).getPropertyValue('--c');   // C3: modal hereda color de categoría
+        var panel=detail.querySelector('.modal__panel');
+        if(panel) panel.style.setProperty('--cat-accent', (cat&&cat.trim())?cat.trim():'');
+        openModal(detail); }
     }
   });
 
